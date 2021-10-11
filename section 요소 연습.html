@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="refresh" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SECTION 요소 연습</title>
+
+  <style>
+    body>*:not(a){
+      padding: 3px;
+      border: 1px solid black;
+    }
+    article>article{
+      border: 2px dashed blue;
+    }
+    .information{
+      text-decoration: none;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-weight: 500;
+      font-size: 24px;
+      color: tomato;
+
+      padding: 5px;
+
+      transition: 0.2s;
+    }
+    .information:hover{
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HEADER</h1>
+    <h2>검색</h2>
+    <input type="text" placeholder="3초마다 초기화">
+  </header>
+  <nav>
+    <h1>NAV</h1>
+    <ul>
+      <li>메뉴1</li>
+      <li>메뉴2</li>
+      <li>메뉴3</li>
+      <li>메뉴4</li>
+    </ul>
+  </nav>
+  <section>SECTION
+    <article>
+      <!--section 요소가 관련 있는 내용을 묶는 역할이라면 article 요소는 관련 있는 내용 중에서 독립적으로 구성된 글을 별도로 묶는 역할이다.
+      출처: https://webdir.tistory.com/310 [WEBDIR] -->
+      <h1>ARTICLE IN SECTION</h1>
+      <p>본문</p>
+    </article>
+  </section>
+  <article>
+    <header>
+      <h1>HEADER IN ARTICLE</h1>
+      <p>Published On <time datetime="2021-10-11">2021년10월11일</time></p>
+    </header>
+
+    <p>본문 내용</p>
+
+    <footer>FOOTER IN ARTICLE: <span style="font-family:serif">posted in me</span></footer>
+
+    <article>
+      <header>
+        ARTICLE IN ARTICLE: 작성자: <a href="">나그네</a> at <time datetime="2021-10-11">2021년 10월 11일</time>
+      </header>
+      <p>코멘트 내용</p>
+    </article>
+  </article>
+  <main>
+    <h1>MAIN</h1>
+    <article>
+      <h2>대충 main 태그 설명한다는 글</h2>
+      <ol>
+        <li>문서내 main요소가 나오는 것은 1번만 허용</li>
+        <li>콘텐츠모델은 Flow content</li>
+        <li>단, main요소를 article, aside, footer, header, nav요소의 하위로 사용하지 않음</li>
+        <li>섹션 콘텐츠가 아니기 때문에 아웃라인 생성하지 않음</li>
+      </ol>
+    </article>
+  </main>
+  <aside>
+    <section>
+      <h3>SECTION IN ASIDE</h3>
+      <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+      </ul>
+    </section>
+  </aside>
+  <footer>
+    <address>
+      연락처: 000-xxxx-cccc <a href="">가능??</a>
+    </address>
+  </footer>
+  <a href="https://webdir.tistory.com/310" class="information">web 페이지의 구역을 나눔(BODY, HEADER, NAV, SECTION, ARTICLE, MAIN, ASIDE, FOOTER) 설명</a>
+</body>
+</html>
